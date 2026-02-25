@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PennyPivot — AI-powered intelligent shopping assistant with smart recommendations and product comparison.">
+    <title>PennyPivot — AI Shopping Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index_style.css">
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">🛍️</span>
+                <span class="logo-text">Penny<span class="logo-accent">Pivot</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#recommendations" class="nav-link">For You</a>
+                <a href="#features" class="nav-link">Features</a>
+            </div>
+            <div class="nav-actions">
+                <button id="compare-btn-nav" class="nav-btn compare-badge" title="Compare Products">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+                    <span id="compare-count" class="badge hidden">0</span>
+                </button>
+                <button id="theme-toggle" class="nav-btn" title="Toggle Theme">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <header id="hero" class="hero">
+        <div class="hero-bg-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">✨ AI-Powered Shopping Revolution</div>
+            <h1 class="hero-title">Find Your <span class="gradient-text">Perfect Product</span> in Seconds</h1>
+            <p class="hero-subtitle">Stop scrolling through thousands of options. Let our intelligent AI assistant analyze, compare, and recommend the best products tailored to your needs and budget.</p>
+            <div id="hero-search" class="search-container">
+                <div class="search-box">
+                    <svg class="search-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    <input type="text" id="search-input" class="search-input" placeholder="Search: 'wireless headphones under ₹5000' or 'gaming laptop'" autocomplete="off">
+                    <button id="search-btn" class="search-btn">Search</button>
+                </div>
+                <div class="search-suggestions" id="search-suggestions"></div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-number">2,500+</span><span class="stat-label">Products</span></div>
+                <div class="stat"><span class="stat-number">100K+</span><span class="stat-label">Reviews Analyzed</span></div>
+                <div class="stat"><span class="stat-number">99%</span><span class="stat-label">User Satisfaction</span></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== FEATURES ========== -->
+    <section id="features" class="section features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose <span class="gradient-text">PennyPivot</span>?</h2>
+                <p class="section-subtitle">Smart shopping made simple</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Powered Recommendations</h3>
+                    <p>Advanced ML algorithms analyze your preferences and suggest products perfectly matched to your needs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Smart Comparison</h3>
+                    <p>Compare multiple products side-by-side with detailed specifications and real user reviews.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Budget-Friendly</h3>
+                    <p>Find the best products within your budget. Advanced filtering by price, rating, and features.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Verified Reviews</h3>
+                    <p>Access to verified, authentic reviews. Filters help identify fake reviews automatically.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Personalized Experience</h3>
+                    <p>Get tailored product suggestions based on your browsing history and preferences.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Instant Search</h3>
+                    <p>Advanced search with natural language. Ask anything, get relevant results in milliseconds.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CATEGORIES ========== -->
+    <section id="categories" class="section categories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Browse Categories</h2>
+                <p class="section-subtitle">Find exactly what you need</p>
+            </div>
+            <div id="category-grid" class="category-grid">
+                <!-- Injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FILTERS + PRODUCTS ========== -->
+    <section id="products" class="section products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Products</h2>
+                <p class="section-subtitle" id="results-count">Showing all products</p>
+            </div>
+            <div class="products-layout">
+                <!-- Sidebar Filters -->
+                <aside id="filters-panel" class="filters-panel">
+                    <div class="filter-group">
+                        <h3 class="filter-title">Price Range</h3>
+                        <div class="price-range-display">
+                            <span id="price-min-display">₹0</span>
+                            <span id="price-max-display">₹100,000</span>
+                        </div>
+                        <div class="range-slider">
+                            <input type="range" id="price-min" min="0" max="100000" value="0" step="500">
+                            <input type="range" id="price-max" min="0" max="100000" value="100000" step="500">
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h3 class="filter-title">Minimum Rating</h3>
+                        <div class="rating-filter" id="rating-filter">
+                            <button class="rating-btn active" data-rating="0">All</button>
+                            <button class="rating-btn" data-rating="3">3★+</button>
+                            <button class="rating-btn" data-rating="3.5">3.5★+</button>
+                            <button class="rating-btn" data-rating="4">4★+</button>
+                            <button class="rating-btn" data-rating="4.5">4.5★+</button>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h3 class="filter-title">Sort By</h3>
+                        <select id="sort-select" class="sort-select">
+                            <option value="relevance">Relevance</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Highest Rated</option>
+                            <option value="reviews">Most Reviewed</option>
+                        </select>
+                    </div>
+                    <button id="clear-filters" class="clear-filters-btn">Clear All Filters</button>
+                </aside>
+
+                <!-- Product Grid -->
+                <div class="product-grid-wrapper">
+                    <div id="product-grid" class="product-grid">
+                        <!-- Injected by JS -->
+                    </div>
+                    <div id="no-results" class="no-results hidden">
+                        <div class="no-results-icon">🔍</div>
+                        <h3>No products found</h3>
+                        <p>Try adjusting your filters or search terms.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== COMPARISON PANEL ========== -->
+    <div id="comparison-panel" class="comparison-panel hidden">
+        <div class="comparison-container">
+            <div class="comparison-header">
+                <h2>Product Comparison</h2>
+                <button id="close-comparison" class="close-btn">&times;</button>
+            </div>
+            <div id="comparison-content" class="comparison-content">
+                <!-- Injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== PRODUCT DETAIL MODAL ========== -->
+    <div id="product-modal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn">&times;</button>
+            <div id="modal-body" class="modal-body">
+                <!-- Injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== RECOMMENDATIONS ========== -->
+    <section id="recommendations" class="section recommendations-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Recommended <span class="gradient-text">For You</span></h2>
+                <p class="section-subtitle">Based on your browsing and AI analysis</p>
+            </div>
+            <div id="rec-grid" class="product-grid rec-grid">
+                <!-- Injected by JS -->
+            </div>
+            <div id="rec-empty" class="rec-empty">
+                <p>👆 Start browsing products to get personalized recommendations!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section id="testimonials" class="section testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Users Love</h2>
+                <p class="section-subtitle">Real feedback from real customers</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"PennyPivot saved me hours! Found the perfect headphones within my budget in minutes. The AI assistant was incredibly helpful!"</p>
+                    <div class="testimonial-author">— Priya Sharma</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"The comparison feature is a game-changer. I compared 5 laptops side-by-side and made a confident purchase decision."</p>
+                    <div class="testimonial-author">— Raj Patel</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"No more fake reviews confusion! PennyPivot helped me identify genuine reviews and buy the right phone."</p>
+                    <div class="testimonial-author">— Sarah Khan</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CHAT WIDGET ========== -->
+    <div id="chat-widget" class="chat-widget">
+        <button id="chat-toggle" class="chat-toggle" title="Ask ShopGenius">
+            <svg class="chat-icon-open" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <svg class="chat-icon-close hidden" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+        <div id="chat-box" class="chat-box hidden">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <span class="chat-avatar">🤖</span>
+                    <div>
+                        <h4>PennyPivot AI Assistant</h4>
+                        <span class="chat-status">Online & Ready</span>
+                    </div>
+                </div>
+            </div>
+            <div id="chat-messages" class="chat-messages">
+                <div class="chat-msg bot">
+                    <span class="msg-avatar">🤖</span>
+                    <div class="msg-bubble">Hi! 👋 I'm your AI shopping assistant. Ask me anything like:
+                    <br>• "Best phone under ₹25,000"
+                    <br>• "Compare gaming laptops"
+                    <br>• "Headphones for sports"
+                    <br>• "Budget smartwatches"</div>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" class="chat-input" placeholder="Ask me anything...">
+                <button id="chat-send" class="chat-send-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 2-7 20-4-9-9-4z"/><path d="m22 2-10 10"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🛍️</span>
+                    <span class="logo-text">Penny<span class="logo-accent">Pivot</span></span>
+                    <p class="footer-desc">AI-powered intelligent shopping assistant for smarter buying decisions.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <a href="#">Help Center</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Community</a>
+                    <a href="#">Feedback</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PennyPivot — Making Smart Shopping Simple. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
